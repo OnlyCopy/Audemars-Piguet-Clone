@@ -6,7 +6,7 @@ function Nav_Nav() {
   return (
     <nav className='h-full'>
         {/* Web Navigation */}
-        <div className='hidden lg:inline space-y-8'>
+        <div className='hidden sm:grid sm:grid-cols-2 w-screen md:inline md:space-y-8'>
             <div className='text-gray-600 text-md space-y-2'>
                 <span className='font-semibold'>WATCHES</span>
                 <ul className='space-y-2'>
@@ -53,7 +53,7 @@ function Nav_Nav() {
             </div>
         </div>
         {/* Mobile navigation */}
-        <div className='lg:hidden px-6 w-full space-y-6 pb-8'>
+        <div className='sm:hidden px-6 w-full space-y-6 pb-8'>
             <ul className='font-semibold space-y-6'>
                 <li className='cursor-pointer hover:opacity-70'>
                     <span>Watches</span>

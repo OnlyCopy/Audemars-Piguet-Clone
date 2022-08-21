@@ -5,6 +5,13 @@ import Menu from './icons/menu.png';
 import Search from './icons/search.png';
 import User from './icons/user.png';
 import Close from './icons/x.png';
+import FacebookLogo from './icons/facebook-logo.png'
+import InstagramLogo from './icons/instagram-logo.png'
+import TwitterLogo from './icons/twitter-logo.png'
+import PinterestLogo from './icons/pinterest-logo.png'
+import YoutubeLogo from './icons/youtube-logo.png'
+import MessaageLogo from './icons/message-rounded.png'
+import Conversation from './icons/conversation.png'
 // Logos
 import MobileWhite from './navbar/audemars-piguet-logo-mini-white.svg'
 import Mobile from './navbar/audemars-piguet-logo-mini.svg'
@@ -87,6 +94,12 @@ export {
     Latest_7,
     Latest_8,
     Musee,
-    Sounds
-    
+    Sounds,
+    FacebookLogo,
+    InstagramLogo,
+    TwitterLogo,
+    PinterestLogo,
+    YoutubeLogo,
+    MessaageLogo,
+    Conversation
 }

@@ -8,6 +8,7 @@ import { Menu, Close, MobileWhite,
     User, } from '../public/images'
 import Nav_Nav from './Nav_Nav'
 import NavStories from './NavStories'
+import NavFooter from './NavFooter'
 
 function Navbar() {
     const [toggle, setToggle] = useState(false)
@@ -16,13 +17,13 @@ function Navbar() {
     <div>
          {
         toggle && (
-            <div className={`${!toggle ? 'hidden' : 'block'} transition-all w-screen h-full md:h-screen bg-white text-black`}>
+            <div className={`${!toggle ? 'hidden' : 'block'} transition-all w-screen h-full md:h-full lg:h-full bg-white text-black`}>
                 <div className='max-w-7xl mx-auto'>
                     
-                    <div className='pt-14 w-full'>
+                    <div className='w-full'>
 
                         {/* Top Navigation */}
-                        <div className='flex justify-between'>
+                        <div className='flex justify-between px-4 top-0 sticky bg-white h-full w-full z-10 py-14'>
                             {/* Left section */}
                             <div className='flex space-x-8 items-center'>
                                 <div className='z-10' onClick={() => setToggle((prev) => !prev)}>
@@ -54,9 +55,16 @@ function Navbar() {
 
                     </div>
 
-                        <div className='max-w-7xl flex flex-col lg:flex-row lg:space-x-12 mt-12'>
-                            <Nav_Nav />
-                            <NavStories />
+                        <div className='max-w-7xl grid sm:grid-cols-2 md:grid-cols-6 mt-12 px-6'>
+                            <div className='sm:order-1'>
+                                <Nav_Nav />
+                            </div>
+                            <div className='sm:col-span-3 md:col-span-5 colspan-4 md:order-2'>
+                                <NavStories />
+                            </div>
+                            <div className='sm:hidden md:grid md:col-span-6 md:order-3'>
+                                <NavFooter />
+                            </div>
                         </div>
 
                 </div>
@@ -64,9 +72,9 @@ function Navbar() {
     </div>
             )
         }
-    <nav className={`${toggle ? 'hidden' : 'block'} transition-all w-full h-24 absolute mt-14 top-0 z-0`}>
+    <nav className={`${toggle ? 'hidden' : 'block'} transition-all w-full h-24 absolute py-14 top-0 z-10`}>
         <div className='max-w-7xl mx-auto'>
-            <div className='flex justify-between text-white'>
+            <div className='flex justify-between px-4 text-white'>
                 {/* Left section */}
                 <div className='flex space-x-8 items-center'>
                     <div className='z-10' onClick={() => setToggle((prev) => !prev)}>
